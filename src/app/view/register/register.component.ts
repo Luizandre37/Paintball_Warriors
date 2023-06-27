@@ -46,7 +46,8 @@ export class RegisterComponent {
       passaword: this.rg,
       confirmation: this.confirmation,
       re: this.rg,
-      cpf:this.cpf
+      cpf:this.cpf,
+      date: this.date
 
 
     }
