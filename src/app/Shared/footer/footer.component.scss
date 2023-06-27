@@ -1,0 +1,42 @@
+.footer {
+  background-color:#190e03;
+  color: #fff;;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  height: 25%;
+}
+
+.column {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.logo-container {
+  margin-bottom: 10px;
+}
+
+.lema {
+  font-weight: bold;
+}
+
+.links {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+
+}
+
+.links li {
+  margin-bottom: 5px;
+}
+
+.links li a {
+  color: #fff;;
+  text-decoration: none;
+}
+
+.links li a:hover {
+  text-decoration: underline;
+}

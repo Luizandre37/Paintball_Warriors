@@ -1,0 +1,43 @@
+.navbar-row {
+  display: flex;
+  align-items: center;
+}
+.custom-navbar {
+  background-color:#190e03; /* Defina a cor desejada para o navbar */
+  color: #fff;;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  flex-grow: 1;
+}
+
+.search-input input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  margin-left: 5px;
+  flex-grow: 1;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+button{
+  margin-right:2rem;
+}
+.custom-button{
+  background-color: #cc0000;
+}
+.lupa-icon {
+  color: black;
+  margin-right: 5px;
+  order: 2;
+}
+.icon{
+  margin-right:2rem;
+}

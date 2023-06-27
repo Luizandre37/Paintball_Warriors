@@ -1,0 +1,60 @@
+
+<div class="container">
+  <h1 class="register-title">Register User</h1>
+   <form (ngSubmit)="onSubmit()">
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="full name" [(ngModel)]="name" name="name" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline" >
+            <input matInput placeholder="E-mail" [(ngModel)]="email" name="email" required>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <input matInput type="telephone" placeholder="telephone" [(ngModel)]="telephone" name="telephone" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <input matInput type="telephone" placeholder="date" [(ngModel)]="date" name="date" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+              <input matStartDate placeholder="Start date" formControlName="date">
+              <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </mat-form-field>
+
+        </div>
+
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <input matInput type="text" placeholder="address" [(ngModel)]="address" name="address" required>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <section class="example-section" [formGroup]="Gender">
+            <h4>Select your gender:</h4>
+            <p><mat-checkbox formControlName="feminine">feminine</mat-checkbox></p>
+            <p><mat-checkbox formControlName="masculine">masculine</mat-checkbox></p>
+            <p><mat-checkbox formControlName="other">I would rather not talk</mat-checkbox></p>
+          </section>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <input matInput type=" passaword" placeholder="passaword" [(ngModel)]="passaword" name="passaword" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <input matInput type="password" placeholder="confirmation" [(ngModel)]="confirmation" name="confirmation" required>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <button mat-button class="meu-botao"  routerLink="login">Proceed to Checkout</button>
+      </div>
+    </form>
+  </div>
+
+
