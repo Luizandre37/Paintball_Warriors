@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { HomeComponent } from './view/home/home.component';
 
 
 
@@ -30,7 +31,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     HeaderComponent,
     FooterComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,184 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "registerUsers": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 2
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 6
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 7
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 8
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 9
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 10
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 11
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 12
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 13
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 14
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 15
+    },
+    {
+      "name": "",
+      "email": "",
+      "address": "",
+      "passaword": "",
+      "confirmation": "",
+      "re": "",
+      "cpf": "",
+      "date": "",
+      "id": 16
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

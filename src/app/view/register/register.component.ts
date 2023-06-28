@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {FormBuilder} from '@angular/forms';
 import {FormGroup, FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -35,30 +35,40 @@ export class RegisterComponent {
   });
 
 
+  public registerUsersForm!: FormGroup;
 
+  constructor(private _formBuilder: FormBuilder,private http: HttpClient, private router: Router ){}
+  ngOnInit(): void {
 
-  constructor(private _formBuilder: FormBuilder,private http: HttpClient  ){}
+  this.registerUsersForm = this._formBuilder.group({
 
-  onSubmit() {
-    const newUser = {
-      name: this.name,
-      email: this.email,
-      passaword: this.rg,
-      confirmation: this.confirmation,
-      re: this.rg,
-      cpf:this.cpf,
-      date: this.date
+    name:[''],
+    email: [''],
+    address:[''],
+    passaword: [''],
+    confirmation: [''],
+    re: [''],
+    cpf: [''],
+    date: [''],
 
+  })
 
     }
- }
+
 
  register() {
-  if (this.passaword === this.confirmation) {
+    this.http.post<any>("http://localhost:3000/registerUsers", this.registerUsersForm.value)
+    .subscribe(res =>{
 
-  } else {
+      alert("register sucessfull")
 
-  }
+      this.registerUsersForm.reset();
+      this.router.navigate(['login'])
+
+    },err=>{
+      alert("something is wrong try again later!!!!")
+
+    })
 }
 
   }

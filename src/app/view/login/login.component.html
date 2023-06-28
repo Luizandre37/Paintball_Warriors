@@ -1,15 +1,15 @@
 <div class="container">
   <h1 class="Login-title">Login</h1>
     <h2>If you have an account, sign in with your email address.</h2>
-  <form (ngSubmit)="onSubmit()">
+  <form [formGroup]="loginUserForm" (ngSubmit)="login()">
     <div class="row">
     <mat-form-field appearance="outline">
-      <input matInput placeholder="email" [(ngModel)]="email" name="email" required >
+      <input matInput placeholder="email" formControlName="email"  name="email" required >
     </mat-form-field>
   </div>
   <div class="row">
     <mat-form-field appearance="outline">
-      <input matInput type="password" placeholder="Senha" [(ngModel)]="senha" name="senha" required>
+      <input matInput type="password" placeholder="password" formControlName="password"  name="password" required>
     </mat-form-field>
   </div>
     <button mat-button class="meu-botao" routerLink="login">Entrar</button>

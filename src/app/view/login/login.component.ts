@@ -1,27 +1,54 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
-  email!: string;
-  senha!: string;
+  public loginUserForm!: FormGroup
 
-  constructor(private http: HttpClient) {}
 
-  onSubmit() {
-    const credenciais = {
-      email: this.email,
-      senha: this.senha
-    };
+  constructor(private formBuilder : FormBuilder, private http : HttpClient, private router: Router) {}
 
-    this.http.post('http://localhost:3000/login', credenciais).subscribe(response => {
-      console.log('Login realizado com sucesso!');
-    });
-  }
+ngOnInit(): void {
+
+  this.loginUserForm = this.formBuilder.group({
+    email:[''],
+    password:['']
+
+  })
 
 }
+
+login(){
+  this.http.get<any>("http://localhost:3000/registerUsers")
+  .subscribe(res=>{
+
+    const user = res.find((a:any)=>{
+      return a.email ===  this.loginUserForm.value.email && a.email ===  a.password === this.loginUserForm.value.password
+
+    });
+
+    if(user){
+        alert("login wthi  sucess");
+        this.loginUserForm.reset();
+        this.router.navigate(['home'])
+    }else{
+       alert("user is not registered")
+
+    }
+  },err=>{
+
+    alert("is there something wrong")
+  })
+
+}
+
+}
+
+
