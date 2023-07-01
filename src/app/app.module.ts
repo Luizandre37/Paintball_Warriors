@@ -48,7 +48,7 @@ import { HomeComponent } from './view/home/home.component';
     FormsModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatNativeDateModule 
+    MatNativeDateModule
 
 
 
