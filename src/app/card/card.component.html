@@ -1,0 +1,19 @@
+<div class="card-wrapper">
+  <div class="envelope-avatar">
+    <img class="envelope-image" [src]="envelopeImage" [alt]="envelopeAlt">
+    <div class="figurinha-wrapper">
+      <img class="figurinha" [src]="figurinhaImage" [alt]="figurinhaAlt">
+    </div>
+    <div class="content-overlay">
+      <div class="card-content">
+        <div class="text-wrapper">
+          <h3 class="card-title">{{ titulo }}</h3>
+          <p class="card-subtitle">{{ subtitulo }}</p>
+        </div>
+        <button class="card-button">
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

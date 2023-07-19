@@ -1,0 +1,52 @@
+<div *ngIf="!showLogin" class="container" >
+  <h1 class="register-title"> Register sign-up</h1>
+   <form #registerSingnup="ngForm" (ngSubmit)="signUp(registerSingnup.value)">
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>full name</mat-label>
+            <input matInput  type="text" ngModel  name="name">
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline" >
+            <mat-label>E-mail</mat-label>
+            <input matInput  type="E-mail" name="email" ngModel >
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <input matInput type="password" placeholder="password" name="password" ngModel>
+          </mat-form-field>
+        </div>
+
+      <div class="row">
+          <button mat-button class="meu-botao" >Proceed to Checkout</button>
+          <a class="auth-toggle-link" (click)="openLogin()">Already have account? Click for Login</a>
+      </div>
+    </form>
+  </div>
+
+
+  <div *ngIf="showLogin" class="login">
+    <h1 class="register-title"> Register sign-up</h1>
+    <P class="error-p">{{authError}}</P>
+     <form #registerLogin="ngForm" (ngSubmit)="signUp(registerLogin.value)">
+          <div class="row">
+            <mat-form-field appearance="outline" >
+              <mat-label>E-mail</mat-label>
+              <input matInput placeholder="E-mail" ngModel="email" >
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field appearance="outline">
+              <input matInput type="password" placeholder="password" ngModel="password">
+            </mat-form-field>
+          </div>
+
+        <div class="row">
+            <button mat-button class="meu-botao" >Proceed to Checkout</button>
+            <a class="auth-toggle-link"(click)="openSignUp()">Don't have account? Click for sign-up</a>
+        </div>
+      </form>
+    </div>
