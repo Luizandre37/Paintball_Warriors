@@ -1,0 +1,29 @@
+<!-- card-product.component.html -->
+
+<div class="card-wrapper">
+  <div class="envelope-avatar">
+    <img class="envelope-image" [src]="cardImage" [alt]="cardAlt">
+    <div class="figurinha-wrapper">
+      <img class="figurinha" [src]="figurinhaImage" [alt]="figurinhaAlt">
+    </div>
+    <div class="content-overlay">
+      <div class="card-content">
+        <div class="text-wrapper">
+          <h3 class="card-title">{{  preco}}</h3>
+          <p class="card-subtitle">{{ subtitulo }}</p>
+          <p class="card-price">{{titulo }}</p>
+          <div class="rating">
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star_half</i>
+          </div>
+        </div>
+        <button class="card-button">
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

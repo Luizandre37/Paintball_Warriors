@@ -47,3 +47,17 @@ export interface order {
   userId:string,
   id:number|undefined
 }
+
+// data-type.ts
+
+export interface CardData {
+  cardImage: string;
+  cardAlt: string;
+  figurinhaImage: string;
+  figurinhaAlt: string;
+  titulo: string;
+  subtitulo: string;
+  preco: string;
+  rating: number;
+  
+}

@@ -1,0 +1,10 @@
+<div class="card-list-container">
+  <div class="card" *ngFor="let card of cards">
+    <!-- Render your card content here -->
+    <img [src]="card.cardImage" [alt]="card.cardAlt" />
+    <img [src]="card.figurinhaImage" [alt]="card.figurinhaAlt" />
+    <h3>{{ card.titulo }}</h3>
+    <p>{{ card.subtitulo }}</p>
+    <p>{{ card.preco }}</p>
+  </div>
+</div>

@@ -27,6 +27,10 @@ import { HomeComponent } from './views/home/home.component';
 import { HomeProductsComponent } from './views/home-products/home-products.component';
 import { BannerComponent } from './banner/banner.component';
 import { CardComponent } from './card/card.component';
+import { BloodAnimationComponent } from './views/blood-animation/blood-animation.component';
+import { CardListComponent } from './views/card-list/card-list.component';
+import { CardProductComponent } from './views/card-product/card-product.component';
+;
 
 
 
@@ -44,7 +48,10 @@ import { CardComponent } from './card/card.component';
     HomeComponent,
     HomeProductsComponent,
     BannerComponent,
-    CardComponent
+    CardComponent,
+    BloodAnimationComponent,
+    CardListComponent,
+    CardProductComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +72,7 @@ import { CardComponent } from './card/card.component';
     MatCardModule,
     FlexLayoutModule,
     MatGridListModule ,
+    MatIconModule,
     ToastrModule.forRoot()
 
 
