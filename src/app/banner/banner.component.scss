@@ -1,8 +1,8 @@
 .banner {
-  width: 400px; /* Ajuste o tamanho do banner conforme necessário */
-  height: 200px; /* Ajuste a altura do banner conforme necessário */
+  width: 400px; 
+  height: 200px;
   position: absolute;
-  top: 20%; /* Ajuste o valor do top para posicionar o banner mais para cima */
+  top: 20%;
   left: 27%;
   transform: translate(-50%, -50%);
 }
@@ -15,7 +15,7 @@
   border: 3px solid #fff;
   border-radius: 40px;
   position: absolute;
-  top: 350px; /* Ajuste o valor do top para descer o botão para baixo */
+  top: 350px;
   left: 50%;
   transform: translate(-50%, -50%);
 }

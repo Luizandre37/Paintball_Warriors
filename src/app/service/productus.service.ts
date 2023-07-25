@@ -66,7 +66,7 @@ export class ProductService {
         titulo: 'Esporte',
         subtitulo: '120 gramas',
         preco: '$49.99',
-        rating: 3 // Rating value here
+        rating: 3 
       },
       {
         cardImage: 'assets/img/paintballGrupo1.png',
@@ -76,7 +76,7 @@ export class ProductService {
         titulo: 'Esporte',
         subtitulo: '120 gramas',
         preco: '$49.99',
-        rating: 3 // Rating value here
+        rating: 3
       },
       {
         cardImage:  'assets/img/paintballGrupo1.png',
@@ -86,7 +86,7 @@ export class ProductService {
         titulo: 'Esporte',
         subtitulo: '120 gramas',
         preco: '$49.99',
-        rating: 3 // Rating value here
+        rating: 3
       },
       {
         cardImage:  'assets/img/paintballGrupo1.png',
