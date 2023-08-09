@@ -1,6 +1,10 @@
-import { Component,Input,OnInit } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { ProductService } from 'src/app/service/productus.service';
-import { CardData } from 'src/data-type';
+import { CartService } from 'src/app/service/cart.service';
+import { trigger, transition, style, animate } from '@angular/animations';
+import { CardData, Product } from 'src/data-type';
+import { Router } from '@angular/router';
+import { of } from 'rxjs';
 
 
 
@@ -8,16 +12,26 @@ import { CardData } from 'src/data-type';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('descendAnimation', [
+      transition(':enter', [
+        style({ transform: 'translateY(-100%)' }),
+        animate('500ms ease-out', style({ transform: 'translateY(0%)' })),
+      ]),
+    ]),
+  ],
 })
 
 
 export class HomeComponent implements OnInit {
 
+
+
   products: CardData[] = [];
   maxStars = 5;
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService , private router: Router, private CartService: CartService) {}
 
   ngOnInit(): void {
     this.productService.getTopProducts().subscribe((data) => {
@@ -38,6 +52,13 @@ export class HomeComponent implements OnInit {
       product.rating++;
     }
   }
+  onEnteredEnvelope() {
+    // After the animation, navigate to the products page
+    setTimeout(() => {
+      this.router.navigate(['/products']);
+    }, 500);
+  }
+
 
 
 }

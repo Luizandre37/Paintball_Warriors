@@ -7,6 +7,7 @@ import { CardComponent } from './card/card.component';
 import { BannerComponent } from './banner/banner.component';
 import { AuthGuard } from './guard/auth.guard';
 import { BloodAnimationComponent } from './views/blood-animation/blood-animation.component';
+import { CartComponent } from './views/cart/cart.component';
 
 
 
@@ -16,9 +17,10 @@ const routes: Routes = [
   {component: HomeComponent,path:'' },
   {component: CardComponent,path:'card' },
   {component: BannerComponent,path:'card' },
+  {component: CartComponent ,path:'cart' },
   {component: BloodAnimationComponent,path:'Blood' },
   {component:RegisterAuthComponent,path:'auth-register'},
-  {component:HomeProductsComponent ,path:'home-products',canActivate:[AuthGuard]},
+  {component:HomeProductsComponent ,path:'products',canActivate:[AuthGuard]},
 
  ];
 

@@ -1,1 +1,144 @@
-<p>home-products works!</p>
+<div class="product-catalog">
+  <!-- Left column for categories -->
+  <div class="categories-container">
+    <div class="categories-title">Categories</div>
+    <mat-list>
+      <mat-list-item *ngFor="let category of categories">
+        <mat-checkbox [(ngModel)]="category.checked">{{ category.name }}</mat-checkbox>
+      </mat-list-item>
+    </mat-list>
+    <div class="categories-title">Brands</div>
+       <mat-list>
+        <mat-list-item *ngFor="let brand of brands">
+        <mat-checkbox [(ngModel)]="brand.checked">{{ brand.name }}</mat-checkbox>
+      </mat-list-item>
+    </mat-list>
+    <div class="categories-title">Features</div>
+    <mat-list>
+      <mat-list-item *ngFor="let feature of features">
+     <mat-checkbox [(ngModel)]="feature.checked">{{ feature.name }}</mat-checkbox>
+   </mat-list-item>
+  </mat-list>
+  <div class="filter-section">
+    <!-- Faixa de preço -->
+    <div class="filter-title">
+      <span>Price range</span>
+      <mat-icon >keyboard_arrow_down</mat-icon>
+    </div>
+    <div class="filter-options">
+      <input type="number" [(ngModel)]="priceRangeMin" />
+      <span> - </span>
+      <input type="number" [(ngModel)]="priceRangeMax" />
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <!-- Condição -->
+    <div class="filter-title">
+      <span>Condition</span>
+      <mat-icon >keyboard_arrow_down</mat-icon>
+    </div>
+    <div class="filter-options">
+      <select >
+        <option value="">All conditions</option>
+        <option *ngFor="let condition of conditions" [value]="condition">{{ condition }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <!-- Avaliações -->
+    <div class="filter-title">
+      <span>Ratings</span>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </div>
+    <div class="filter-options">
+      <select [(ngModel)]="selectedRating">
+        <option value="">All ratings</option>
+        <option *ngFor="let rating of ratings" [value]="rating">{{ rating }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <!-- Fabricante -->
+    <div class="filter-title">
+      <span>Manufacturer</span>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </div>
+    <div class="filter-options">
+      <select [(ngModel)]="selectedManufacturer">
+        <option value="">All manufacturers</option>
+        <option *ngFor="let manufacturer of manufacturers" [value]="manufacturer">{{ manufacturer }}</option>
+      </select>
+    </div>
+  </div>
+  <img src="assets/img/painatball-chefe2.png" alt="Imagem da nova seção">
+
+</div>
+  <div class="product-cards-container">
+    <div class="row">
+      <div class="card-product" *ngFor="let product of products">
+        <img class="card-image" [src]="product.cardImage" [alt]="product.cardAlt" />
+        <div class="card-title">{{ product.preco }}</div>
+
+        <div class="card-subtitle">{{ product.subtitulo }}</div>
+        <div class="card-rating">
+          <div class="card-rating">
+            <mat-icon class="star-icon" [ngClass]="{ 'star-filled': product.rating >= 1 }">star</mat-icon>
+            <mat-icon class="star-icon" [ngClass]="{ 'star-filled': product.rating >= 2 }">star</mat-icon>
+            <mat-icon class="star-icon" [ngClass]="{ 'star-filled': product.rating >= 3 }">star</mat-icon>
+            <mat-icon class="star-icon" [ngClass]="{ 'star-filled': product.rating >= 4 }">star</mat-icon>
+            <mat-icon class="star-icon" [ngClass]="{ 'star-filled': product.rating >= 5 }">star</mat-icon>
+          </div>
+        </div>
+        <div class="card-price">{{ product.titulo }}</div>
+        <div class="icon-container">
+          <i class="favorite-icon material-icons" (click)="increaseRating(product)">favorite</i>
+          <div class="card-rating">
+            <i class="fa fa-star" [ngClass]="{ 'star-filled': product.rating >= 1 }"></i>
+            <i class="fa fa-star" [ngClass]="{ 'star-filled': product.rating >= 2 }"></i>
+            <i class="fa fa-star" [ngClass]="{ 'star-filled': product.rating >= 3 }"></i>
+            <i class="fa fa-star" [ngClass]="{ 'star-filled': product.rating >= 4 }"></i>
+            <i class="fa fa-star" [ngClass]="{ 'star-filled': product.rating >= 5 }"></i>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card-product" *ngFor="let product of products">
+        <img class="card-image" [src]="product.cardImage" [alt]="product.cardAlt" />
+        <div class="card-title">{{ product.preco }}</div>
+
+
+        <div class="card-subtitle">{{ product.subtitulo }}</div>
+        <div class="card-rating">
+          <div class="card-rating">
+            <mat-icon class="star-icon" [ngClass]="{ 'star-filled': product.rating >= 1 }">star</mat-icon>
+            <mat-icon class="star-icon" [ngClass]="{ 'star-filled': product.rating >= 2 }">star</mat-icon>
+            <mat-icon class="star-icon" [ngClass]="{ 'star-filled': product.rating >= 3 }">star</mat-icon>
+            <mat-icon class="star-icon" [ngClass]="{ 'star-filled': product.rating >= 4 }">star</mat-icon>
+            <mat-icon class="star-icon" [ngClass]="{ 'star-filled': product.rating >= 5 }">star</mat-icon>
+          </div>
+        </div>
+        <div class="card-price">{{ product.titulo }}</div>
+        <div class="icon-container">
+
+          <i class="favorite-icon material-icons" (click)="increaseRating(product)">favorite</i>
+
+          <div class="card-rating">
+            <i class="fa fa-star" [ngClass]="{ 'star-filled': product.rating >= 1 }"></i>
+            <i class="fa fa-star" [ngClass]="{ 'star-filled': product.rating >= 2 }"></i>
+            <i class="fa fa-star" [ngClass]="{ 'star-filled': product.rating >= 3 }"></i>
+            <i class="fa fa-star" [ngClass]="{ 'star-filled': product.rating >= 4 }"></i>
+            <i class="fa fa-star" [ngClass]="{ 'star-filled': product.rating >= 5 }"></i>
+
+          </div>
+        </div>
+        <button class="add-to-cart-button">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+

@@ -1,8 +1,8 @@
-<div class="card-wrapper">
+<div class="card-wrapper" (click)="onFigurinhaClicked()">
   <div class="envelope-avatar">
     <img class="envelope-image" [src]="envelopeImage" [alt]="envelopeAlt">
-    <div class="figurinha-wrapper">
-      <img class="figurinha" [src]="figurinhaImage" [alt]="figurinhaAlt">
+    <div class="figurinha-wrapper" [@descendAnimation]="figurinhaState">
+      <img class="figurinha" [src]="figurinhaImage" [alt]="figurinhaAlt"  [@descendAnimation]="figurinhaState">
     </div>
     <div class="content-overlay">
       <div class="card-content">

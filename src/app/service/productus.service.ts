@@ -8,7 +8,7 @@ import { cart,product,order,CardData } from 'src/data-type';
   providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = 'http://localhost:3000/products';
+ private apiUrl = 'http://localhost:3000/products';
   cartData = new EventEmitter<product[] | []>();
   constructor(private http: HttpClient) { }
   addProduct(data: product) {
@@ -66,7 +66,7 @@ export class ProductService {
         titulo: 'Esporte',
         subtitulo: '120 gramas',
         preco: '$49.99',
-        rating: 3 
+        rating: 3
       },
       {
         cardImage: 'assets/img/paintballGrupo1.png',
@@ -112,6 +112,8 @@ export class ProductService {
 
     ]);
   }
+
+
 
 
   updateProduct(product: product) {

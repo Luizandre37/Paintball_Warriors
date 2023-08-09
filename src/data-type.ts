@@ -59,5 +59,30 @@ export interface CardData {
   subtitulo: string;
   preco: string;
   rating: number;
-  
+
 }
+ export interface Category {
+  name: string;
+  checked: boolean;
+}
+
+export interface Brands {
+  name: string;
+  checked: boolean;
+}
+export interface Product {
+  cardImage: string;
+  cardAlt: string;
+  titulo: string;
+  subtitulo: string;
+  preco: number;
+  rating: number;
+}
+
+export interface Features {
+  name: string;
+  checked: boolean;
+}
+
+
+

@@ -30,7 +30,10 @@ import { CardComponent } from './card/card.component';
 import { BloodAnimationComponent } from './views/blood-animation/blood-animation.component';
 import { CardListComponent } from './views/card-list/card-list.component';
 import { CardProductComponent } from './views/card-product/card-product.component';
-;
+import { MatListModule } from '@angular/material/list';
+import { MatSelectModule } from '@angular/material/select';
+import { CartComponent } from './views/cart/cart.component';
+
 
 
 
@@ -51,7 +54,9 @@ import { CardProductComponent } from './views/card-product/card-product.componen
     CardComponent,
     BloodAnimationComponent,
     CardListComponent,
-    CardProductComponent
+    CardProductComponent,
+    CartComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -73,6 +78,9 @@ import { CardProductComponent } from './views/card-product/card-product.componen
     FlexLayoutModule,
     MatGridListModule ,
     MatIconModule,
+    MatListModule,
+    MatSelectModule,
+
     ToastrModule.forRoot()
 
 
